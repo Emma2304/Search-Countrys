@@ -1,0 +1,149 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #334155;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.img-fluid {
+    width: 100%;
+}
+
+.my-2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Hero-Icon */
+
+.hero-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #334155;
+}
+
+/* filtros */
+
+.filter-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-search {
+    box-shadow: 0px 0px 6px 13px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border-radius: 0.35rem;
+    background-color: white;
+    padding: 0.73rem;
+}
+
+.form-search input {
+    border: none;
+    outline: none;
+    margin-left: 0.5rem;
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+.form-search ::placeholder {
+    font-size: 1.2rem;
+}
+
+/* main */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 0.35rem;
+    box-shadow: 0 4px 16px 12px rgb(0 0 0 / 0.1), 0 2px 16px 9px rgb(0 0 0 / 0.1);
+}
+
+.card img {
+    border-top-left-radius: 0.35rem;
+    border-top-right-radius: 0.35rem;
+}
+
+.card-content {
+    padding: 2rem;
+    opacity: 0.8;
+}
+
+.card-content h3 {
+    margin-bottom: 2rem;
+    color: darkred;
+}
+
+/* Textos */
+
+.introducer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f1f5f9;
+    font-size: 2rem;
+    font-weight: 400;
+    text-shadow: -3px -3px rgba(6, 6, 38, 0.974);
+}
+
+@media (max-width: 1000px) {
+    .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 750px) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+
+    .filter-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-search {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .form-search input {
+        width: 85%;
+    }
+
+    .grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 450px) {
+    .hero-icon {
+        width: 1.3rem;
+    }
+
+    .form-search input {
+        margin-left: 0;
+    }
+}
